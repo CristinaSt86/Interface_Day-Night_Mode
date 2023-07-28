@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Mon, 20 Mar 2023 12:33:49 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .nightmode {
+            color: white;
+            background: #222;
+        } 
+        #switch {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            padding: 4px 8px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        .nightmode #switch {
+            color: white;
+            border: 1px solid white;
+        }
+
+        
+    </style>
+    
+  </head>
+  <body onclick="verifica">
+  <div id="switch" onclick="modifica()"><img src="images/moon.png" height="18" /><span>Night mode</span></div>
+    <h1>Main title of the site</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas explicabo molestiae, amet nobis ex provident aut commodi enim temporibus! Esse eius dolorum corporis distinctio necessitatibus, exercitationem quibusdam iure rem consequuntur.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates inventore aperiam porro quidem at dolorem eos? Eligendi ipsum sit esse aliquid aperiam ratione, quasi est, architecto, nihil nesciunt impedit explicabo!</p>
+    <img src="images/im2.jpg" width="400" />
+	
+	
+	<script>
+	var x=document.getElementsByTagName('body')[0];
+	var y=document.getElementById('switch');
+	
+	function modifica(){
+	x.classList.toggle('nightmode');
+	if (x.classList.contains('nightmode')){
+	y.getElementsByTagName('img')[0].setAttribute('src', 'images/sun.png');
+	y.getElementsByTagName('span')[0].innerHTML='day mode';
+	}
+	else{
+	y.getElementsByTagName('img')[0].setAttribute('src', 'images/moon.png');
+	y.getElementsByTagName('span')[0].innerHTML='night mode';
+	}
+	}
+	</script>
+         
+  </body>
+</html>
